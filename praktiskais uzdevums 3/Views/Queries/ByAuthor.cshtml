@@ -1,0 +1,16 @@
+﻿@model List<praktiskais_uzdevums_3.Models.Book>
+@{
+    ViewData["Title"] = "Grāmatas pēc autora";
+}
+
+<h2>Meklēt grāmatas pēc autora vārda</h2>
+
+<form method="get">
+    <input type="text" name="text" value="@ViewBag.Text" placeholder="Autora vārds (vai daļa)" />
+    <button type="submit">Meklēt</button>
+</form>
+
+@if (ViewBag.Searched == true)
+{
+    <partial name="_BooksTable" model="Model" />
+}

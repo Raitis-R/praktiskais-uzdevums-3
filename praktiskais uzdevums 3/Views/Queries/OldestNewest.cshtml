@@ -1,0 +1,18 @@
+﻿@using praktiskais_uzdevums_3.Models
+@{
+    ViewData["Title"] = "Vecākā un jaunākā grāmata";
+    var oldest = ViewBag.Oldest as Book;
+    var newest = ViewBag.Newest as Book;
+}
+
+<h2>Vecākā un jaunākā grāmata</h2>
+
+@if (oldest == null || newest == null)
+{
+    <p>Nav grāmatu.</p>
+}
+else
+{
+    <p><strong>Vecākā:</strong> @oldest.Title (@oldest.Year) - @oldest.Author.Name</p>
+    <p><strong>Jaunākā:</strong> @newest.Title (@newest.Year) - @newest.Author.Name</p>
+}

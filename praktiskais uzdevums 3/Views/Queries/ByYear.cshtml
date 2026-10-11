@@ -1,0 +1,16 @@
+﻿@model List<praktiskais_uzdevums_3.Models.Book>
+@{
+    ViewData["Title"] = "Grāmatas pēc gada";
+}
+
+<h2>Meklēt grāmatas pēc izdošanas gada</h2>
+
+<form method="get">
+    <input type="number" name="year" value="@ViewBag.Year" placeholder="Gads, piemēram, 1905" />
+    <button type="submit">Meklēt</button>
+</form>
+
+@if (ViewBag.Searched == true)
+{
+    <partial name="_BooksTable" model="Model" />
+}

@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Bibliotēka";
+}
+
+<h1>Bibliotēka</h1>
+
+<h3>Vaicājumi ar ievadi</h3>
+<ul>
+    <li><a asp-controller="Queries" asp-action="ByAuthor">Meklēt grāmatas pēc autora vārda</a></li>
+    <li><a asp-controller="Queries" asp-action="ByYear">Meklēt grāmatas pēc gada</a></li>
+    <li><a asp-controller="Queries" asp-action="ByGenre">Meklēt grāmatas pēc žanra</a></li>
+</ul>
+
+<h3>Vaicājumi bez ievades</h3>
+<ul>
+    <li><a asp-controller="Queries" asp-action="SortedByYear">Grāmatas sakārtotas pēc gada</a></li>
+    <li><a asp-controller="Queries" asp-action="AuthorCounts">Grāmatu skaits katram autoram</a></li>
+    <li><a asp-controller="Queries" asp-action="OldestNewest">Vecākā un jaunākā grāmata</a></li>
+</ul>
